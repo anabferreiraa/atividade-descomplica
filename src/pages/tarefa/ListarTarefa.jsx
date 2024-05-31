@@ -33,12 +33,12 @@ function createData(
 
 //Definição do array contendo os dados iniciais da listagem de tarefas
 const initialRows = [
-  createData(1, 'Tarefa 1', 'Descrição da Tarefa 1', '2022-01-01', '2022-01-02', 'Concluída', 'Recurso 1'),
-  createData(2, 'Tarefa 2', 'Descrição da Tarefa 2', '2022-01-03', '2022-01-04', 'Concluída', 'Recurso 2'),
-  createData(3, 'Tarefa 3', 'Descrição da Tarefa 3', '2022-01-04', '2022-01-05', 'Em Andamento', 'Recurso 3'),
-  createData(4, 'Tarefa 4', 'Descrição da Tarefa 4', '2022-01-05', '2022-01-06', 'Em Andamento', 'Recurso 4'),
-  createData(5, 'Tarefa 5', 'Descrição da Tarefa 5', '2022-01-06', '2022-01-07', 'Em Andamento', 'Recurso 5'),
-  createData(6, 'Tarefa 6', 'Descrição da Tarefa 6', '2022-01-07', '2022-01-08', 'Aguardando', 'Recurso 6'),
+  createData(1, 'lote b', 'Descrição ', '2024-01-01', '2024-01-02', 'Em Andamento', 'Variação: P'),
+  createData(2, 'lote b', 'Descrição ', '2024-02-12', '2024-04-12', 'Concluída', 'Variação: P'),
+  createData(3, 'lote c', 'Descrição ', '2024-02-14', '2024-04-17', 'Concluída', 'Variação: G'),
+  createData(4, 'lote b', 'Descrição ', '2024-04-17', '2024-05-22', 'Em Andamento', 'Variação: M'),
+  createData(5, 'lote a', 'Descrição ', '2024-05-26', '2024-05-23', 'Em Andamento', 'Variação: G'),
+  createData(6, 'lote d', 'Descrição ', '2024-05-33', '2024-06-33', 'Em Entrega', 'Variação: M'),
 ];
 
 //Componente ListarTarefa
@@ -85,8 +85,8 @@ const ListarTarefa = () => {
     <>
     <Card>
         <CardHeader
-          title="Tarefas"
-          subheader="Listagem de Tarefas"
+          title="Estoque"
+          subheader="Gerenciamente e Armazenamento do estoque"
         /> 
         <CardContent>
             <TableContainer component={Paper}>
@@ -94,12 +94,12 @@ const ListarTarefa = () => {
                 <TableHead>
                 <TableRow>
                     <TableCell>#</TableCell>
-                    <TableCell>Título</TableCell>
+                    <TableCell>Nome</TableCell>
                     <TableCell align="right">Descrição</TableCell>
-                    <TableCell align="right">Data de Início</TableCell>
-                    <TableCell align="right">Data de Finalização</TableCell>
+                    <TableCell align="right">Data de Entrada</TableCell>
+                    <TableCell align="right">Data de Saída</TableCell>
                     <TableCell align="right">Status</TableCell>
-                    <TableCell align="right">Recurso</TableCell>
+                    <TableCell align="right">Tipo</TableCell>
                     <TableCell align="left"></TableCell>
                     <TableCell align="left"></TableCell>
                 </TableRow>
@@ -134,7 +134,7 @@ const ListarTarefa = () => {
             </TableContainer>
         </CardContent>
         <CardActions>
-            <Button size="small" variant="contained" onClick={handleOpen}>Criar Tarefa</Button>
+            <Button size="small" variant="contained" onClick={handleOpen}>Criar Estoque</Button>
             <Button size="small" variant="outlined">Cancelar</Button>
       </CardActions> 
     </Card>

@@ -81,13 +81,14 @@ const EditarTarefa = ({handleCloseEditar, idTarefaSelecionada, tarefas, tarefa, 
           <Grid item xs={12}>
             <FormControl fullWidth>
               <Input id="tarefa_titulo" aria-describedby="tarefa_titulo_helper_text" value={tituloTarefa} onChange={e => { setTituloTarefa(e.target.value) }} />
-              <FormHelperText id="tarefa_titulo_helper_text">Título da Tarefa.</FormHelperText>
+              <FormHelperText id="tarefa_titulo_helper_text">
+Nome do destoque</FormHelperText>
             </FormControl>
           </Grid>
           <Grid item xs={12}>  
             <FormControl fullWidth>
               <Input id="tarefa_descricao" aria-describedby="tarefa_descricao_helper_text" value={descricaoTarefa} onChange={e => { setDescricaoTarefa(e.target.value) }} />
-              <FormHelperText id="tarefa_descricao_helper_text">Descrição da Tarefa.</FormHelperText>
+              <FormHelperText id="tarefa_descricao_helper_text">Descrição</FormHelperText>
             </FormControl>
           </Grid>
           <Grid container spacing={2} mt={1}>
@@ -100,7 +101,7 @@ const EditarTarefa = ({handleCloseEditar, idTarefaSelecionada, tarefas, tarefa, 
                     paddingLeft:'13px'
                   }} 
                 />
-                <FormHelperText id="tarefa_inicio_helper_text">Início da Tarefa.</FormHelperText>
+                <FormHelperText id="tarefa_inicio_helper_text">Entrada</FormHelperText>
               </FormControl>
             </Grid>  
             <Grid item xs={3}>  
@@ -112,12 +113,12 @@ const EditarTarefa = ({handleCloseEditar, idTarefaSelecionada, tarefas, tarefa, 
                     paddingLeft:'13px'
                   }} 
                 />
-                <FormHelperText id="tarefa_fim_helper_text">Fim da Tarefa.</FormHelperText>
+                <FormHelperText id="tarefa_fim_helper_text">Saida</FormHelperText>
               </FormControl>
             </Grid>
             <Grid item xs={3}>  
               <FormControl fullWidth>
-                <InputLabel htmlFor="tarefa_recurso">Recurso</InputLabel>
+                <InputLabel htmlFor="tarefa_recurso">Tipo</InputLabel>
                 <Select
                   id="tarefa_recurso"
                   value={recursoTarefa}
@@ -129,9 +130,9 @@ const EditarTarefa = ({handleCloseEditar, idTarefaSelecionada, tarefas, tarefa, 
                     fontWeight: 400,
                   }} 
                 >
-                  <MenuItem value={'Recurso 1'}>Recurso 1</MenuItem>
-                  <MenuItem value={'Recurso 2'}>Recurso 2</MenuItem>
-                  <MenuItem value={'Recurso 3'}>Recurso 3</MenuItem>
+                  <MenuItem value={'Recurso 1'}>variação: P</MenuItem>
+                  <MenuItem value={'Recurso 2'}>variação: M</MenuItem>
+                  <MenuItem value={'Recurso 3'}>variação: G</MenuItem>
                 </Select>
               </FormControl>
             </Grid>
@@ -149,15 +150,15 @@ const EditarTarefa = ({handleCloseEditar, idTarefaSelecionada, tarefas, tarefa, 
                     fontWeight: 400,
                   }} 
                 >
-                  <MenuItem value={'Aguardando'}>Aguardando</MenuItem>
-                  <MenuItem value={'Em Andamento'}>Em Andamento</MenuItem>
+                  <MenuItem value={'Aguardando'}>Armazenado</MenuItem>
+                  <MenuItem value={'Em Andamento'}>Em entrega</MenuItem>
                   <MenuItem value={'Concluída'}>Concluída</MenuItem>
                 </Select>
               </FormControl>
             </Grid>
             <Grid container spacing={2} pl={2} mt={2}>
               <Grid item xs={1}>
-                <Button size="small" variant="contained" onClick={handleEditar}>Salvar</Button>
+                <Button  size="small" variant="contained" onClick={handleEditar}>Salvar Alteração</Button>
               </Grid>  
               <Grid item xs={1}>  
                 <Button size="small" variant="outlined" onClick={handleCloseEditar}>Cancelar</Button>  
